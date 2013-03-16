@@ -23,5 +23,9 @@ c = int(raw_input("请输入数字:"))
 请输入数字:009
 print a+c
 
+字符串替换
+a = "Hello,World"
+a = a.replace(",","=")
+print a
 
 
