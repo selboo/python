@@ -42,6 +42,25 @@ del a[2]		# 删除 下标 2 对应 3 的数值
 del a[1:3]
 
 字典
+获取 keys 是否存在 
+a={}
+a.get("name")
 
+>>> a = {"Name":"Selbo", "Age":"1232"}
+>>> b = {"Email":"xuguocan@gmail.com"}
+>>> a
+{'Age': '1232', 'Name': 'Selbo'}
+>>> b
+{'Email': 'xuguocan@gmail.com'}
+>>> a.update(b)		# 把 b 字典 更新到 a 内
+>>> a
+{'Age': '1232', 'Name': 'Selbo', 'Email': 'xuguocan@gmail.com'}
+
+>>> c = {"Age":"200"}
+>>> c
+{'Age': '200'}
+>>> a.update(c)		# 把 c 字典 更新到 a 内 如果存在则覆盖
+>>> a
+{'Age': '200', 'Name': 'Selbo', 'Email': 'xuguocan@gmail.com'}
 
 
