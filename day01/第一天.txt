@@ -28,4 +28,18 @@ a = "Hello,World"
 a = a.replace(",","=")
 print a
 
+列表操作
+a = [2,5,3,6]
+a.append(9)		# 添加 int 9
+a.append("9")	# 添加 str 9
+print a
+
+a.remove(9)		# 删除 int 9
+a.remove("9")	# 删除 str 9
+
+a = [2,5,3,6]
+del a[2]		# 删除 下标 2 对应 3 的数值
+del a[1:3]
+
+
 
