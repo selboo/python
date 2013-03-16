@@ -28,6 +28,28 @@ a = "Hello,World"
 a = a.replace(",","=")
 print a
 
+>>> a = "\hello\n.py"
+>>> print a
+\hello
+.py
+
+>>> a = r"\hello\n.py"
+>>> print a
+\hello\n.py
+
+
+>>> a = "\t\t\hello\n.py\n\n\n"
+>>> print a.strip()            
+\hello
+.py
+>>> print a
+                \hello
+.py
+
+
+
+>>> 
+
 列表操作
 a = [2,5,3,6]
 a.append(9)		# 添加 int 9
