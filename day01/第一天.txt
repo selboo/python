@@ -1,0 +1,27 @@
+class IpAddress(models.Model):                                   
+ip = models.IntegerField()
+
+		To = FollowRelation.objects.filter(user=request.user.username)
+		for n in To:
+			if username == n.follower:
+				return HttpResponseRedirect(return_url)
+
+
+===============================================================
+s="Hello,World"
+
+长度
+len(s)
+
+不用转移 三个双引号
+s="""Type "help", "copyright", "credits" or "license" for more information."""
+
+
+a = int(raw_input("请输入数字:")) 
+请输入数字:80
+c = int(raw_input("请输入数字:")) 
+请输入数字:009
+print a+c
+
+
+
