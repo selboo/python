@@ -1,0 +1,7 @@
+hello:你好
+world:世界
+a:1
+b:2
+weibo:微博
+c:3
+d:4
