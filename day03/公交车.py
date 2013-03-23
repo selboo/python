@@ -4,8 +4,8 @@
 #stop  = raw_input("起点：")
 start = "aaa"
 stop  = "777"
-print start
-print stop
+#print start
+#print stop
 f = open("bus.txt")
 dict_list = f.readlines()
 f.close()
@@ -30,8 +30,8 @@ for n in range(0, len(dict_list)):
         bus_mun_stop = dict_list[n].split(":")[0].strip('\n')
         stop_bus_list = bus_list.split(",")[:]
         
-print start_bus_list
-print stop_bus_list
+#print start_bus_list
+#print stop_bus_list
 
 b3 = list(set(start_bus_list) & set(stop_bus_list))
 
