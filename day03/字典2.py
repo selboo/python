@@ -8,7 +8,8 @@ dict_data = {}
 
 for n in dict_list:
     n_list = n.split(":")
-    dict_data[n_list[0]] = n_list[1]
+    if dict_list > 1:
+        dict_data[n_list[0]] = n_list[1]
     
 word = raw_input("Please input a word:")
 
