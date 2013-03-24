@@ -1,0 +1,3 @@
+pack(padx=50)	设置长度
+
+pack(padx=50, side=LEFT) 设置位置 side = "LEFT|RIGHT"
