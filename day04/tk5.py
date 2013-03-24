@@ -107,40 +107,34 @@ class App:
 
 	def caln_1(self):
 		dengyu = "+"
+		self.x4_v1.set(dengyu)
 		if len(self.number_list) > 0:
 			caln_list_x1 = ''.join(self.number_list)
 			self.x1_v1.set(''.join(self.number_list))
-			self.x4_v1.set(dengyu)
-			self.caln_list = 1
 			print caln_list_x1
 			self.number_list = []
-			
 	def caln_2(self):
 		dengyu = "-"
+		self.x4_v1.set(dengyu)
 		if len(self.number_list) > 0:
 			caln_list_x1 = ''.join(self.number_list)
 			self.x1_v1.set(''.join(self.number_list))
-			self.x4_v1.set(dengyu)
-			self.caln_list = 1
 			print caln_list_x1
 			self.number_list = []
-
 	def caln_3(self):
 		dengyu = "*"
+		self.x4_v1.set(dengyu)
 		if len(self.number_list) > 0:
 			caln_list_x1 = ''.join(self.number_list)
 			self.x1_v1.set(''.join(self.number_list))
-			self.x4_v1.set(dengyu)
-			self.caln_list = 1
 			print caln_list_x1
 			self.number_list = []
 	def caln_4(self):
 		dengyu = "/"
+		self.x4_v1.set(dengyu)
 		if len(self.number_list) > 0:
 			caln_list_x1 = ''.join(self.number_list)
 			self.x1_v1.set(''.join(self.number_list))
-			self.x4_v1.set(dengyu)
-			self.caln_list = 1
 			print caln_list_x1
 			self.number_list = []
 		
@@ -149,7 +143,6 @@ class App:
 		if len(self.number_list) > 0:
 			caln_list_x1 = ''.join(self.number_list)
 			self.x2_v1.set(''.join(self.number_list))
-			self.caln_list = 1
 			print caln_list_x1
 			self.number_list = []
 			
@@ -165,7 +158,11 @@ class App:
 			self.x3_v1.set(int(self.x1_v1.get()) / int(self.x2_v1.get()))
 
 		self.x3_v1.get()
-
+		
+		self.x1_v1.set("")
+		self.x2_v1.set("")
+		self.x4_v1.set("")
+		self.number_list = []
 
 	def e_exit(self):
 		print "exit..."
