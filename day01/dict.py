@@ -13,7 +13,7 @@ a["qq"] = "654321"
 a["email"] = "123456@qq.com"
 
 b = {'qq': '111111', 'age': '90', 'name': 'Tom', 'email': 'qq@qq.com'},{'qq': '654321', 'age': '30', 'name': 'Peter', 'email': '123456@qq.com'}
-
+print b
 #print type(b[0].items())
 
 for n in range(0,len(b)):
