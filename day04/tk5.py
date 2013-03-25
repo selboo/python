@@ -99,39 +99,25 @@ class App:
 
 		e.pack(side=LEFT)
 
-	def caln_1(self):
-		dengyu = "+"
-		self.x4_v1.set(dengyu)
+	def get_Number(self, Symb):
+		self.x4_v1.set(Symb)
 		if len(self.number_list) > 0:
-			caln_list_x1 = ''.join(self.number_list)
 			self.x1_v1.set(''.join(self.number_list))
-			print caln_list_x1
-			self.number_list = []
-	def caln_2(self):
-		dengyu = "-"
-		self.x4_v1.set(dengyu)
-		if len(self.number_list) > 0:
-			caln_list_x1 = ''.join(self.number_list)
-			self.x1_v1.set(''.join(self.number_list))
-			print caln_list_x1
-			self.number_list = []
-	def caln_3(self):
-		dengyu = "*"
-		self.x4_v1.set(dengyu)
-		if len(self.number_list) > 0:
-			caln_list_x1 = ''.join(self.number_list)
-			self.x1_v1.set(''.join(self.number_list))
-			print caln_list_x1
-			self.number_list = []
-	def caln_4(self):
-		dengyu = "/"
-		self.x4_v1.set(dengyu)
-		if len(self.number_list) > 0:
-			caln_list_x1 = ''.join(self.number_list)
-			self.x1_v1.set(''.join(self.number_list))
-			print caln_list_x1
 			self.number_list = []
 			
+	def caln_1(self):
+		dengyu = "+"
+		self.get_Number(dengyu)
+	def caln_2(self):
+		dengyu = "-"
+		self.get_Number(dengyu)
+	def caln_3(self):
+		dengyu = "*"
+		self.get_Number(dengyu)
+	def caln_4(self):
+		dengyu = "/"
+		self.get_Number(dengyu)
+
 	def Calc(self, Value_1, Value_2, Symbol):
 		if Symbol == "+":
 			Value_3 = Value_1 + Value_2
@@ -148,9 +134,7 @@ class App:
 	def caln_5(self):
 
 		if len(self.number_list) > 0:
-			caln_list_x1 = ''.join(self.number_list)
 			self.x2_v1.set(''.join(self.number_list))
-			print caln_list_x1
 			self.number_list = []
 
 		Symbol = self.x4_v1.get()
