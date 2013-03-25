@@ -16,8 +16,13 @@ class App:
 		self.number_list = []
 
 		def changenum(number):
-			self.number_list.append(str(number))
 			print self.number_list
+			if self.x4_v1.get() == "":
+				self.number_list.append(str(number))
+				self.x1_v1.set(''.join(self.number_list))
+			if self.x4_v1.get() != "":
+				self.number_list.append(str(number))
+				self.x2_v1.set(''.join(self.number_list))
 		####################################
 		x1 = Label(frame, text="v1")
 		x1.pack()
