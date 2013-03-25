@@ -99,12 +99,6 @@ class App:
 
 		e.pack(side=LEFT)
 
-	def get_symbol(self):
-		print self.dengyu
-	
-	def set_symbol(self,dengyu):
-		self.dengyu = dengyu
-
 	def caln_1(self):
 		dengyu = "+"
 		self.x4_v1.set(dengyu)
@@ -137,6 +131,19 @@ class App:
 			self.x1_v1.set(''.join(self.number_list))
 			print caln_list_x1
 			self.number_list = []
+			
+	def Calc(self, Value_1, Value_2, Symbol):
+		if Symbol == "+":
+			Value_3 = Value_1 + Value_2
+		elif Symbol == "-":
+			Value_3 = Value_1 - Value_2
+		elif Symbol == "*":
+			Value_3 = Value_1 * Value_2
+		elif Symbol == "/":
+			Value_3 = Value_1 / Value_2
+			
+		Value_re = "%d %s %d = %d" %(Value_1, Symbol, Value_2, Value_3)
+		self.x3_v1.set(Value_re)
 		
 	def caln_5(self):
 
@@ -145,20 +152,16 @@ class App:
 			self.x2_v1.set(''.join(self.number_list))
 			print caln_list_x1
 			self.number_list = []
-			
-		Symbol = filter(lambda ch: ch in '+|-|*|/', self.x4_v1.get())
+
+		Symbol = self.x4_v1.get()
+		print Symbol
+		Value_1 = int(self.x1_v1.get())
+		Value_2 = int(self.x2_v1.get())
 		
-		if Symbol == "+":
-			self.x3_v1.set(int(self.x1_v1.get()) + int(self.x2_v1.get()))
-		if Symbol == "-":
-			self.x3_v1.set(int(self.x1_v1.get()) - int(self.x2_v1.get()))
-		if Symbol == "*":
-			self.x3_v1.set(int(self.x1_v1.get()) * int(self.x2_v1.get()))
-		if Symbol == "/":
-			self.x3_v1.set(int(self.x1_v1.get()) / int(self.x2_v1.get()))
+		self.Calc(Value_1, Value_2, Symbol)
 
 		self.x3_v1.get()
-		
+	
 		self.x1_v1.set("")
 		self.x2_v1.set("")
 		self.x4_v1.set("")
