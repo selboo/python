@@ -1,0 +1,6 @@
+#coding=utf-8
+
+import urllib
+
+def callback(down, block, size):
+	

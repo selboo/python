@@ -16,7 +16,6 @@ class App:
 		self.number_list = []
 
 		def changenum(number):
-			print self.number_list
 			if self.x4_v1.get() == "":
 				self.number_list.append(str(number))
 				self.x1_v1.set(''.join(self.number_list))
