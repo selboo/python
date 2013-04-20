@@ -1,0 +1,32 @@
+<html>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<hr>
+{{<<blog}}
+
+<hr>
+<ul>
+{{for n in blogm_all:}}
+<li>{{=n.name}}-------------{{=n.content}}</li>
+{{pass}}
+</ul>
+
+
+<!--
+<table>
+<td>张三说</td>
+<td>"你好"</td>
+<td>{{=name}}</td>
+<td>{{=age}}</td>
+</table>
+
+<form name="input" action="" method="post">
+用户名: <input type="text" name="user"><br>
+QQ: <input type="text" name="qq"><br>
+密码: <input type="password" name="pass"><br>
+邮箱: <input type="text" name="mail"><br>
+内容: <textarea type="text" name="content"></textarea><br>
+<input type="submit" value="提交">
+</form>
+-->
+
+</html>
