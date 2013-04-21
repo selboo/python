@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> 千人学习公益项目---python</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="uliweb blog入门开发" />
+<link href="{{=url_for_static('bootstrap/2.0.4/bootstrap.css')}}" rel="stylesheet" type="text/css" / >
+
+  <link href="/static/css/screen.css?2" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="/static/js/main.js"></script>
+  <link href='//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+<header>
+<hgroup>
+<h1><a href="/">uliweb</a></h1>
+</hgroup>
+</header>
+
+  <nav role=navigation>
+	<ul role=subscription data-subscription="rss">
+	  <li><a href="/feed/" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+	</ul>
+	<form action="http://www.google.com/cse" method="get">
+	  <fieldset role="site-search">
+		<input type="hidden" name="cx" value="{{ settings.CSE_ID }}">
+		<input class="search" type="search" name="q" placeholder="Search" />
+	  </fieldset>
+	</form>
+	<ul role=main-navigation>
+	  <li><a href="/">Blog</a></li>
+	  <li><a href="/archives/">Archives</a></li>
+	</ul>
+  </nav>
+
+
+<body>
+
+  <div id="main">
+    <div id="content">
+<div class="blog-index">
+{{block content}}
+{{end content}}
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,32 +1,16 @@
 {{extend "base.html"}}
-
 {{block content}}
 {{if hasattr(request, 'user') and request.user:}}
 欢迎{{=request.user.username}} <a href="/logout">退出</a>
 {{else:}}
 <a href="/register"> 注册</a> <a href="/login">登录</a>
 {{pass}}
-
-{{use "xheditor"}}
 <hr>
+{{if hasattr(request, 'user') and request.user:}}
+{{use "xheditor"}}
 {{<<form}}
-
-   {{for n in blogm_all:}}
-  <article>
-    <header>
-        <h1 class="entry-title"><a href="">{{=n.title}}</a></h1>
-        <p class="meta">
-      	<time datetime="" pubdate>{{=n.datetime}}</time>
-        </p>
-    </header>
-    <div class="entry-content">{{=n.content}}</div>
-    <footer>
-      <a rel="full-article" href="/edit/{{=n.id}}">编辑</a>
-    </footer>
-  </article>
-    {{pass}}
-
-
+<hr>
+{{pass}}
 {{include "inc_xheditor_plugins.html"}}
 <script type="text/javascript">
     $(function(){
@@ -35,10 +19,9 @@
             skin:'default',
             upFlashExt:"swf",
             plugins:plugins,
-            height:100,
-            width:700,
+            height:300,
+            width:600,
         });
     });
 </script>
-
-{{end content}}
+{{end}}
